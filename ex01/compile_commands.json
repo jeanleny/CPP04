@@ -1,0 +1,38 @@
+[
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/main.cpp", "-o", "object/main.o"],
+	"file": "src/main.cpp",
+	"output": "object/main.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Animal.cpp", "-o", "object/Animal.o"],
+	"file": "src/Animal.cpp",
+	"output": "object/Animal.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Cat.cpp", "-o", "object/Cat.o"],
+	"file": "src/Cat.cpp",
+	"output": "object/Cat.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/Dog.cpp", "-o", "object/Dog.o"],
+	"file": "src/Dog.cpp",
+	"output": "object/Dog.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/WrongAnimal.cpp", "-o", "object/WrongAnimal.o"],
+	"file": "src/WrongAnimal.cpp",
+	"output": "object/WrongAnimal.o"
+},
+{
+	"directory": "/home/lperis/Work/CommonCore/4th/CPP/CPP_04/ex01",
+	"arguments": ["c++", "-Wall", "-Werror", "-Wextra", "-std=c++98", "-MMD", "-MP", "-g", "-Iinclude", "-c", "src/WrongCat.cpp", "-o", "object/WrongCat.o"],
+	"file": "src/WrongCat.cpp",
+	"output": "object/WrongCat.o"
+}
+]
