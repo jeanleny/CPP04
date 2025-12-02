@@ -6,15 +6,11 @@
 
 int	main(void)
 {
-	std::cout << "\n[Subject test]\n" << std::endl;
-	std::cout << "\nDog\n" << std::endl;
-	const Animal* j = new Dog();
-	std::cout << "\nCat\n" << std::endl;
-	const Animal* i = new Cat();
-	std::cout << std::endl;
-	delete j;
-	delete i;
-
+	//IMPOSSIBLE
+	//Animal animal;
+	//Animal beast = new Animal();
+	//Animal oui = new Cat();
+	//Cat	non = new Animal();
 	std::cout << "\n[BASIC TESTS]" << std::endl;
 	std::cout << "\n --Constructors--" << std::endl;
 	std::cout << "\nCat\n" << std::endl;
@@ -76,5 +72,6 @@ int	main(void)
 	}
 	std::cout << "constructor : " << constructor << std::endl; 
 	std::cout << "destructor : " << destructor << std::endl; 
+
 	std::cout << "\n --Destructors--" << std::endl;
 }
