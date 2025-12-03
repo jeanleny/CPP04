@@ -1,6 +1,9 @@
 #include <AMateria.hpp>
+#include <Cure.hpp>
+#include <Ice.hpp>
+#include <ICharacter.hpp>
 
 int main ()
 {
-	std::cout << "oui" << std::endl;
+	ICharacter oui;	
 }

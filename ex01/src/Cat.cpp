@@ -12,15 +12,14 @@ Cat::Cat()
 Cat::Cat (const Cat& obj) : Animal(obj)
 {
 	std::cout << "Cat copy destructor called" << std::endl;
-	brain = new Brain();
+	brain = new Brain(*obj.brain);
 	type = "Cat";
 }
 
 Cat &Cat::operator=(Cat const& rhs)
 {
 	std::cout << "Cat assignement operator called" << std::endl;
-	delete brain;
-	brain = new Brain();
+	*brain = *rhs.brain;
 	if (this != &rhs)
 		Animal::operator=(rhs);
 	return (*this);

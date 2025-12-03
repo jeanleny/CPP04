@@ -8,6 +8,9 @@ SRC_DIR		= src
 BUILD_DIR	= object
 NAME		= amateria
 SRC			+= src/main.cpp			\
+			   src/AMateria.cpp		\
+			   src/Cure.cpp			\
+			   src/Ice.cpp			
 
 OBJ			= ${SRC:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o}
 DEP			= $(OBJ:.o=.d)
