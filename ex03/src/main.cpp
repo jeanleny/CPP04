@@ -5,6 +5,7 @@
 int main ()
 {
 	ICharacter *oui = new Character("michel");
+	ICharacter *non = new Character("jppmavi");
 	AMateria *glagla = new Cure();
 	AMateria *glaga = new Cure();
 	AMateria *glag = new Cure();
@@ -17,7 +18,9 @@ int main ()
 	oui->unequip(8);
 	oui->equip(glag);
 	oui->equip(gla);
+	oui->use(1, *non);
 	delete oui;
+	delete non;
 	delete glagla;
 	delete glaga;
 	delete glag;

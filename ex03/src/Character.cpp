@@ -68,7 +68,4 @@ void	Character::unequip(int idx)
 void	Character::use(int idx, ICharacter& target)
 {
 	this->inventory[idx]->use(target);
-	//use amateria function
-	(void)idx;
-	(void)target;
 }
