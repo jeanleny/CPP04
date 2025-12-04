@@ -1,9 +1,12 @@
-#include <AMateria.hpp>
-#include <Cure.hpp>
+#include <Character.hpp>
 #include <Ice.hpp>
-#include <ICharacter.hpp>
+#include <Cure.hpp>
 
 int main ()
 {
-	ICharacter oui;	
+	ICharacter *oui = new Character("michel");
+	AMateria *glagla = new Cure();
+	glagla->use(*oui);
+	delete oui;
+	delete glagla;
 }

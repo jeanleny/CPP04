@@ -1,4 +1,5 @@
 #include <Ice.hpp>
+#include "ICharacter.hpp"
 
 Ice::Ice()
 {
@@ -33,3 +34,7 @@ Ice *Ice::clone() const
 	return (obj);	
 }
 
+void	Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << std::endl;
+}

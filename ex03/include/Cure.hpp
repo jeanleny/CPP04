@@ -1,4 +1,7 @@
+#pragma once
+
 #include <AMateria.hpp>
+#include <ICharacter.hpp>
 
 class Cure : public AMateria
 {
@@ -8,6 +11,6 @@ class Cure : public AMateria
 	Cure& operator=(const Cure& rhs);
 	virtual ~Cure();
 
-	Cure* clone() const;
-
+	Cure*	clone() const;
+	void	use(ICharacter& target);
 };

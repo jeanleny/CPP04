@@ -1,4 +1,5 @@
 #include <AMateria.hpp>
+#include <ICharacter.hpp>
 
 AMateria::AMateria () : type("Default")
 {
@@ -27,6 +28,12 @@ AMateria::~AMateria()
 {
 	std::cout << "Destructor AMateria called" << std::endl;
 }
+
+void	AMateria::use(ICharacter& target)
+{
+	std::cout << "AMateria use on " << target.getName() << std::endl;
+}
+
 
 std::string const & AMateria::getType() const
 {

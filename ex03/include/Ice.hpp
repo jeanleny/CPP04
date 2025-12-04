@@ -1,3 +1,5 @@
+#pragma once
+
 #include <AMateria.hpp>
 
 class Ice : public AMateria
@@ -9,4 +11,5 @@ class Ice : public AMateria
 	virtual ~Ice();
 
 	Ice* clone() const;
+	void	use(ICharacter& target);
 };
