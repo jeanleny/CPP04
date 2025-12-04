@@ -10,6 +10,7 @@ class Ice : public AMateria
 	Ice& operator=(const Ice& rhs);
 	virtual ~Ice();
 
-	Ice* clone() const;
-	void	use(ICharacter& target);
+	Ice*				clone() const;
+	void				use(ICharacter& target);
+	std::string const & getType() const;
 };

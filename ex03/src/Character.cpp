@@ -1,19 +1,19 @@
 #include <Character.hpp>
 #include "AMateria.hpp"
 
-Character::Character() : _name("Default")
+Character::Character() : _name("Default"), inventory()
 {
 	std::cout << "Character default constructor" << std::endl;
 }
 
-Character::Character(std::string name) : _name(name)
+Character::Character(std::string name) : _name(name), inventory()
 {
 	std::cout << "Character argument constructor" << std::endl;
 }
 
-Character::Character(const Character& obj) : _name(obj._name)
+Character::Character(const Character& obj) : _name(obj._name), inventory()
 {
-	std::cout << "Character argument constructor" << std::endl;
+	std::cout << "Character copy constructor called" << std::endl;
 }
 
 Character& Character::operator=(const Character& rhs)
@@ -36,12 +36,33 @@ std::string const& Character::getName() const
 
 void	Character::equip(AMateria* m)
 {
-	(void)m;
+	for (int i = 0; i < 4; i++)
+	{
+		if (!inventory[i])
+		{
+			std::cout << _name << " : add " << m->getType() << " to inventory" << std::endl;
+			inventory[i] = m;
+			return ;
+		}
+	}
+	if (!m)
+		std::cout << _name << " : wrong object" << std::endl;
+	else
+		std::cout << _name << " : full Inventory" << std::endl;
 }
 
 void	Character::unequip(int idx)
 {
-	(void)idx;
+	if (idx > 3 || idx < 0)
+	{
+		std::cout << _name << " : nothing to unequip here !" << std::endl;
+		return ;
+	}
+	else 
+	{
+		std::cout << _name << " : removed " << inventory[idx]->getType() << " from inventory " << std::endl;
+		inventory[idx] = NULL;
+	}
 }
 
 void	Character::use(int idx, ICharacter& target)

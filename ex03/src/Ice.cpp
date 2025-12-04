@@ -17,8 +17,6 @@ Ice& Ice::operator=(const Ice& rhs)
 {
 	std::cout << "Ice assignement operator" << std::endl;
 	(void)rhs;
-	//if (this != &rhs)
-	//		this->type = rhs.type;
 	return (*this);
 }
 
@@ -37,4 +35,9 @@ Ice *Ice::clone() const
 void	Ice::use(ICharacter& target)
 {
 	std::cout << "* shoots an ice bolt at " << target.getName() << std::endl;
+}
+
+std::string const& Ice::getType() const
+{
+	return (type);
 }

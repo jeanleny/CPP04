@@ -11,6 +11,7 @@ class Cure : public AMateria
 	Cure& operator=(const Cure& rhs);
 	virtual ~Cure();
 
-	Cure*	clone() const;
-	void	use(ICharacter& target);
+	Cure*				clone() const;
+	void				use(ICharacter& target);
+	std::string const & getType() const;
 };
