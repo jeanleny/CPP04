@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ICE_HPP
+# define ICE_HPP
 
 #include <AMateria.hpp>
 
@@ -14,3 +15,4 @@ class Ice : public AMateria
 	void				use(ICharacter& target);
 	std::string const & getType() const;
 };
+#endif
