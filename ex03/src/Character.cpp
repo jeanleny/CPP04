@@ -14,6 +14,9 @@ Character::Character(std::string name) : _name(name), inventory()
 Character::Character(const Character& obj) : _name(obj._name), inventory()
 {
 	std::cout << "Character copy constructor called" << std::endl;
+	for (int i = 0; i < 4; i++)
+		if (obj.inventory[i])
+			inventory[i] = obj.inventory[i]->clone();
 }
 
 Character& Character::operator=(const Character& rhs)
@@ -27,6 +30,8 @@ Character& Character::operator=(const Character& rhs)
 Character::~Character()
 {
 	std::cout << "Character destructor called" << std::endl;
+	for (int i = 0; i < 4 ; i++)
+		delete inventory[i];
 }
 
 std::string const& Character::getName() const
@@ -38,7 +43,7 @@ void	Character::equip(AMateria* m)
 {
 	if (!m)
 	{
-		std::cout << _name << " : wrong object" << std::endl;
+		std::cout << _name << " can't equip : wrong object" << std::endl;
 		return ;
 	}
 	if (held(*m))
@@ -74,6 +79,12 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter& target)
 {
+	if (!this->inventory[idx])
+	{
+		std::cout << this->_name << " can't use : wrong materia" << std::endl;
+		return ;
+	}
+	std::cout << _name << " : ";
 	this->inventory[idx]->use(target);
 }
 

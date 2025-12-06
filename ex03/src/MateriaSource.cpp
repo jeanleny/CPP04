@@ -55,7 +55,7 @@ AMateria* MateriaSource::createMateria(std::string const& type)
 	for (int i = 0; i < 4 ; i++)
 	{
 		if (memory[i] && memory[i]->getType() == type)
-			return (memory[i]);
+			return (memory[i]->clone());
 	}
 	std::cout << "Unkown " << type << " materia" << std::endl;
 	return (0);

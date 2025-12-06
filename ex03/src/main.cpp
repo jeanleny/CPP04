@@ -5,7 +5,7 @@
 
 int main ()
 {
-	/*ICharacter *oui = new Character("michel");
+	ICharacter *oui = new Character("michel");
 	ICharacter *non = new Character("jppmavi");
 	AMateria *glagla = new Cure();
 	AMateria *glaga = new Cure();
@@ -13,7 +13,7 @@ int main ()
 	AMateria *gla = new Cure();
 	AMateria *ik = new Ice();
 
-	std::cout << "\nEquip\n" << std::endl;
+	std::cout << "\n -- Equip Test -- \n" << std::endl;
 	oui->equip(glagla);
 	oui->equip(glaga);
 	oui->equip(ik);
@@ -31,36 +31,33 @@ int main ()
 	delete oui;
 	delete non;
 	delete glagla;
-	delete glaga;
-	delete glag;
-	delete gla;
-	delete ik;*/
-	/*IMateriaSource* src = new MateriaSource();
+
+	std::cout << "\n -- Subject Test -- \n" << std::endl;
+	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("cure");
+	tmp = src->createMateria("jeanmi");
 	me->equip(tmp);
-	ICharacter* bob = new Character("bob");
+	ICharacter* bob = (new Character("bob"));
 	me->use(0, *bob);
 	me->use(1, *bob);
 	delete bob;
 	delete me;
-	delete src;*/
-	IMateriaSource *src = new MateriaSource();
-	ICharacter *me = new Character("me");
-	//AMateria *tmp;
-	AMateria *ice = new Ice();
-	src->learnMateria(ice);
-	//tmp = src->createMateria("ice");
-	//me->equip(tmp);
-	//delete src;
-	delete ice;
-	delete me;
 	delete src;
+
+	std::cout << "\n --Character Copy constructor-- \n" << std::endl;
+	Character michel("oui");
+	AMateria *ice = (new Ice);
+	michel.equip(ice);
+	Character andrey(michel);
+	andrey.use(0, michel);
+	std::cout << "addresses : " << std::endl;
+	std::cout << "michel : " << michel.inventory[0] << std::endl;
+	std::cout << "andrey : " << andrey.inventory[0] << std::endl;
 
 	return 0;
 }
